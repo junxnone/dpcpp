@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			repo = 'https://github.com/' + repo
 		var mdfile = 'README.md'
 		if (location.hash.slice(1) != '/')
-			mdfile = location.hash.slice(1) + '.md'
+			mdfile = location.hash.slice(1).split('?')[0] + '.md'
 		var url = repo + '/tree/main/docs/' + mdfile
 		window.open(url)
 	})
